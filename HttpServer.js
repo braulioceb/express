@@ -4,7 +4,6 @@ const fs = require('fs');
 const port = 9000;
 
 let localDatabase = [{myNumber: "a"}];
-console.log(localDatabase);
 const server = http.createServer(function(req, res){
     const {url, method} = req;
     const [urlNoQuery] = url.split('?');
