@@ -1,0 +1,20 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "An API to store books",
+  "main": "index.js",
+  "dependencies": {
+    "express-validator": "^6.11.1",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src src/server.js"
+  },
+  "author": "Braulio",
+  "license": "ISC"
+}

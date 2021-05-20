@@ -46,7 +46,7 @@ const getById = (req,res) => {
             res.send(book);
         } else{
             res.status(404).send({
-                message: "Resource Not Found -aaa",
+                message: "Resource Not Found",
             })
         }
     });    
@@ -125,7 +125,7 @@ const createBook = (req, res) =>{
     Book.getAll((users)=>{
         const user = users.find(ent => _.isEqual(body, _.pick(ent, ['title', 'author', 'publicationYear', 'tags'])));
         if (user){
-            res.status(404).send({
+            res.status(409).send({
                 message: "El elemento ya existe"
             });
         } else{
@@ -150,7 +150,7 @@ const deleteBook = (req, res)=>{
             });
         } else {
             res.status(404).send({
-                message: "Resource Not Found-iiii"
+                message: "Resource Not Found"
             })
         }
     });
@@ -173,7 +173,7 @@ const updateBook = (req, res)=>{
             });
         } else {
             res.status(404).send({
-                message: "Resource Not Found-uuu"
+                message: "Resource Not Found"
             })
         }
     });
